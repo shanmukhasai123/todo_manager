@@ -2,8 +2,8 @@ class TodosController<ApplicationController
     skip_before_action :verify_authenticity_token
 
     def index
-        render plain: Todo.all.map{|todo| todo.to_displayable}.join("\n")
-        
+        #render plain: Todo.all.map{|todo| todo.to_displayable}.join("\n")
+        render "index"
     end
     def show
         id=params[:id]

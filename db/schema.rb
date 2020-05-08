@@ -10,27 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_30_082835) do
+ActiveRecord::Schema.define(version: 2020_05_08_174628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "person", id: :integer, default: nil, force: :cascade do |t|
-    t.string "fname"
-    t.string "lname"
-    t.float "salary"
-    t.string "state"
-  end
-
-  create_table "sales", id: :integer, default: nil, force: :cascade do |t|
-    t.string "company"
-  end
-
-  create_table "student", id: false, force: :cascade do |t|
-    t.integer "regno"
-    t.string "name", limit: 20
-    t.float "cgpa"
-  end
 
   create_table "todos", force: :cascade do |t|
     t.text "todo_text"

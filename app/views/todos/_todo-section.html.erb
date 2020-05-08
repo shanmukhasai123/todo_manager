@@ -1,0 +1,24 @@
+ <section class="Todo-section">
+            <div class="TodoSectionTitle" style="display:flex;">
+                <h2 class="TodoSectionTitle-text"><%=label%></h2>
+                <p class="TodoSectionTitle-remainingCount"><%=todos.completed.count%>/<%=todos.count%></p>
+            </div>
+            <ul>
+            <% todos.all.each do |todo| %>
+                <li class="TodoItem">
+                    <div class="TodoItem-container" style="display:flex;">
+                        <input class="TodoItem-checkbox" type="checkbox">
+                        <p class="text"><%=todo.todo_text%></p>
+                        <%if show_due_date%>
+                         <p class=TodoItem-duedate><%= todo.due_date.to_s(:short) %></p>
+                        <% end %>
+                        <label class="image1">
+                        <img src="trash.svg" alt="trash" width="8.6" height="12.2">
+                        </label>
+                                
+                    </div>
+
+                </li>
+            <% end %>
+            </ul>
+</section>
