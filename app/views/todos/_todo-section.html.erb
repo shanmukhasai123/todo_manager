@@ -8,7 +8,11 @@
                 <% if !(flag and todo.completed) %> 
                     <li class="TodoItem">
                         <div class= "TodoItem-container" style="display: flex;">
-                            <input class="TodoItem-checkbox" type="checkbox">
+                            <% if todo.completed %>
+                                <input class="TodoItem-checkbox" type="checkbox" checked>
+                            <% else %>
+                                <input class="TodoItem-checkbox" type="checkbox">
+                            <% end %>
                             <p class="text"><%= todo.todo_text %></p>
                             <% if show_due_date %>
                                 <p class=TodoItem-duedate><%= todo.due_date.to_s(:short) %></p>
