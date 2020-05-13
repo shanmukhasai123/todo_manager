@@ -10,10 +10,13 @@
                         <div class= "TodoItem-container" style="display: flex;">
                             <% if todo.completed %>
                                 <input class="TodoItem-checkbox" type="checkbox" checked>
+                                <p class="text" style ="text-decoration:line-through;"><%= todo.todo_text %></p>
                             <% else %>
                                 <input class="TodoItem-checkbox" type="checkbox">
+                                <p class="text"><%= todo.todo_text %></p>
+                                
                             <% end %>
-                            <p class="text"><%= todo.todo_text %></p>
+                    
                             <% if show_due_date %>
                                 <p class=TodoItem-duedate><%= todo.due_date.to_s(:short) %></p>
                             <% end %>
