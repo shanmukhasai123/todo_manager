@@ -8,11 +8,13 @@
                 <% if !(flag and todo.completed) %> 
                     <li class="TodoItem">
                         <div class= "TodoItem-container" style="display: flex;">
+                            <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
+                            <input class="TodoItem-checkbox" name="completed" type="checkbox" <%= todo.completed ? "checked" : "" %> onclick="this.form.submit()">
+                            <% end %>
                             <% if todo.completed %>
-                                <input class="TodoItem-checkbox" type="checkbox" checked>
                                 <p class="text" style ="text-decoration:line-through;"><%= todo.todo_text %></p>
                             <% else %>
-                                <input class="TodoItem-checkbox" type="checkbox">
+                            
                                 <p class="text"><%= todo.todo_text %></p>
                                 
                             <% end %>
