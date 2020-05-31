@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
   def to_displayable
-    "#{name} #{email} #{password}"
+    "#{first_name} #{email} #{password}"
   end
 end
