@@ -1,6 +1,4 @@
 class Todo < ActiveRecord::Base
-  belongs_to :user
-
   def to_displayable
     "#{todo_text} #{due_date.to_s(:short)} #{completed}"
   end
