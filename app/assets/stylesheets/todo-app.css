@@ -91,6 +91,9 @@ body{
     margin-left: 10px;
     align-self: center;
 }
+.AddTodo{
+    display: flex;
+}
 
 
 
