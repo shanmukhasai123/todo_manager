@@ -1,6 +1,10 @@
 body{
-    max-width: 1000px;
-    
+    max-width: 600px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 300px;
+
+   
 }
 .Todopage-title{
     max-width: 129px;

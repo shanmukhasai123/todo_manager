@@ -1,11 +1,12 @@
 body{
-    max-width: 1000px;
-    
+   
+    margin-left: 300px;
+    margin-right: auto;
 }
 .Todopage-title{
     max-width: 129px;
     max-height: 27px;
-    margin-left: 327px;
+    margin-left: 0px;
     margin-top: 60px;
     color: #453c52;
     letter-spacing: 0.14px;
@@ -19,7 +20,7 @@ body{
     border-style: solid;
     border-radius: 4px;
     border-color: #BFB8CC;
-    margin-left: 324px;
+    margin-left: 3px;
     max-height: 32px;
 
 }
@@ -44,7 +45,7 @@ body{
     max-width: 100px;
     font-size: 14px;
     max-height: 19px;
-    margin-left: 328px;
+    margin-left: 1px;
     margin-top: 24px;
     line-height: 19px;
     color: #453c52;
@@ -60,7 +61,7 @@ body{
     color: #453c52;
 }
 .TodoItem-checkbox{
-    margin-left: 347px;
+    margin-left: 20px;
     max-width: 16px;
     max-height: 16px;
     border-radius: 4px;
