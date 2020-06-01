@@ -1,21 +1,21 @@
  <section class="Todo-section">
             <div class="TodoSectionTitle" style="display:flex;">
-                <h2 class="TodoSectionTitle-text"><%= label %></h2>
-                <p class="TodoSectionTitle-remainingCount"><%= todos.completed.count %>/<%= todos.count %></p>
+                <h2 class="TodoSectionTitle-text"> <%= label %> </h2>
+                <p class="TodoSectionTitle-remainingCount"> <%= todos.completed.count %>/<%= todos.count %> </p>
             </div>
             <ul>
             <% todos.all.each do |todo| %>
                 <% if !(flag and todo.completed) %> 
                     <li class="TodoItem">
-                        <div class= "TodoItem-container" style="display: flex;">
+                        <div class="TodoItem-container" style="display: flex;">
                             <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
                             <input class="TodoItem-checkbox" name="completed" type="checkbox" <%= todo.completed ? "checked" : "" %> onclick="this.form.submit()">
                             <% end %>
                             <% if todo.completed %>
-                                <p class="text" style ="text-decoration:line-through;"><%= todo.todo_text %></p>
+                                <p class="text" style ="text-decoration:line-through;"> <%= todo.todo_text %> </p>
                             <% else %>
                             
-                                <p class="text"><%= todo.todo_text %></p>
+                                <p class="text"> <%= todo.todo_text %> </p>
                                 
                             <% end %>
                     
